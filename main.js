@@ -3,7 +3,7 @@ let productos = []
 
 console.warn('Se produjo un error')
 
-
+//Funcion que trae datos utilizando fetch y resolviendolo con async y await
 const getDatos = async () => {
   try {
     const respuesta = await fetch("productos.json");
@@ -13,34 +13,12 @@ const getDatos = async () => {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+getDatos()
 
 let cartas = document.getElementById("cartas");
 
+
+//Renderizo en el DOM los productos
 const renderizarProductos = () => {
   productos.map((producto) => {
     const { imagen, titulo, precio } = producto; //Explicar destructuring
