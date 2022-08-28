@@ -16,7 +16,7 @@ const getDatos = async () => {
     productos = await respuesta.json()
     renderizarProductos()
   } catch (error) {
-    console.error("Ha ocurrido un")
+    console.error(error)
   }
 }
 
